@@ -7,7 +7,7 @@ class HealthInsightStruct(dspy.Signature):
     """
     structured_stats = dspy.InputField(desc="")
     #instruction = dspy.InputField("JSON  containing the instruction to llm regarding role, goal and style rules to display text")
-    explaination = dspy.OutputField(desc="A detailed, layman-friendly grounded explanation ") 
+    explanation = dspy.OutputField(desc="A detailed, layman-friendly grounded explanation ") 
 
 
 class InsightExplaination(dspy.Module):
