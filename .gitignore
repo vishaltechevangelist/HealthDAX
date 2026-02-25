@@ -12,4 +12,5 @@ error.log
 feature_metadata.py
 main_ui_sidebar.py
 __pycache__/
-
+.vscode/
+cache/
