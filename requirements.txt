@@ -5,7 +5,7 @@ dspy-ai
 ollama
 #pandasai==1.5.21
 #pandasai[ollama]
-#pandasai
-#pandasai-litellm
+pandasai
+pandasai-litellm
 missingno
 seaborn
