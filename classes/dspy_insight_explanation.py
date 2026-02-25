@@ -9,6 +9,7 @@ class HealthInsightStruct(dspy.Signature):
     #instruction = dspy.InputField("JSON  containing the instruction to llm regarding role, goal and style rules to display text")
     explaination = dspy.OutputField(desc="A detailed, layman-friendly grounded explanation ") 
 
+
 class InsightExplaination(dspy.Module):
     def __init__(self):
         super().__init__()
