@@ -22,4 +22,4 @@ Average BMI among non-smokers: 24.1
 
 result = explain_obj(structured_stats=stats)
 
-print(result.explaination)
+print(result.explanation)

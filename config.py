@@ -1,4 +1,4 @@
-import json
+import json, os
 
 DATASET1_SCHEMA = {
     "patient_number": {},
