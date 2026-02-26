@@ -109,6 +109,26 @@ json_for_pandas = {
   "sql": "SELECT COUNT(physical_activity_steps_per_day) FROM dataset1 INNER JOIN dataset2 ON patient_number WHERE day_number <= 10"
 }
 
+json_for_pandas = {    
+  "datasets": ["dataset1"],
+  "join": {
+    "left_dataset": "dataset1",
+    "right_dataset": "dataset2",
+    "type": "inner",
+    "on": "patient_number"
+  },
+  "filters": [
+    {
+      "column": "smoking",
+      "operator": "==",
+      "value": "Yes"
+    }
+  ],
+  "groupby": ["chronic_kidney_disease"],
+  "metrics": [],
+  "sql": "SELECT dataset1.chronic_kidney_disease FROM dataset1 INNER JOIN dataset2 ON dataset1.patient_number = dataset2.patient_number WHERE dataset1.smoking == 'Yes'"
+}
+
 def execute_structured_query(datasets, query):
     df = datasets[query["datasets"][0]]
     # print(df)
