@@ -14,7 +14,7 @@ def execute_structured_query(datasets, query):
     # print(df)
     # sys.exit(0)
     
-    if query.get("join") and query["join"]["right_dataset"] is not None:
+    if query.get("join") and query["join"]["right_dataset"] is not None and query["join"]["left_dataset"] is not None:
         right_df = datasets[query["join"]["right_dataset"]]
         df = df.merge(right_df, on=query["join"]["on"])
     
