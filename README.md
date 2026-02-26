@@ -26,11 +26,11 @@ User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured 
 
 ## Project Structure
 healthdax\
-├── app.py\
-├── classes
+├── app.py \
+├── classes \
 │   └── dspy_insight_explanation.py\
-├── config.py\
-├── data\
+├── config.py \
+├── data \
 │   ├── processed\
 │   │   └── patient_health_data.csv\
 │   └── raw\
