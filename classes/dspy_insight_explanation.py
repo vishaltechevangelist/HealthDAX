@@ -28,7 +28,7 @@ class PandasQueryStruct(dspy.Signature):
       "filters": list[{
           "column": str type should be keys of schema,
           "operator": "==|>|<|>=|<=",
-          "value": str|int|float
+          "value": int|true
       }],
       "groupby": list[str],
       "metrics": list[{
@@ -40,7 +40,6 @@ class PandasQueryStruct(dspy.Signature):
     Constraint - 
     - Use only given schema column and return json response only, 
     - don't change key names, don't add new keys, 
-    - If only one dataset is needed, set right_dataset = null.
     """
 
     input_query = dspy.InputField(desc="User query in natural language often english language")

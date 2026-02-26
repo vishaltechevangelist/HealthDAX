@@ -9,11 +9,12 @@ def load_datasets(dataset_schema_file, rename_col_dict):
 
 
 def execute_structured_query(datasets, query):
-    
+    query = validate_query(query=query)
+
     df = datasets[query["datasets"][0]]
     # print(df)
     # sys.exit(0)
-    
+    # print(query.get("join") and query["join"]["right_dataset"] is not None and query["join"]["left_dataset"] is not None)
     if query.get("join") and query["join"]["right_dataset"] is not None and query["join"]["left_dataset"] is not None:
         right_df = datasets[query["join"]["right_dataset"]]
         df = df.merge(right_df, on=query["join"]["on"])
@@ -24,6 +25,7 @@ def execute_structured_query(datasets, query):
         # print(col, op, val)
         # st.dataframe(df.columns)
         if op == "==":
+            # print("I am here")
             df = df[df[col] == val]
         elif op == ">":
             df = df[df[col] > val]
@@ -60,3 +62,9 @@ def aggregate_activity(df2):
         .rename(columns={"physical_activity_steps_per_day": "avg_steps"})
     )
     return activity
+
+def validate_query(query):
+    if query["join"]["right_dataset"] is None or query["join"]["left_dataset"] is None or query["join"]["left_dataset"] == "" or query["join"]["right_dataset"] =="":
+        query["join"] = None
+    return query
+    
