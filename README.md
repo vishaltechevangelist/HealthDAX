@@ -10,7 +10,7 @@ health insights using a local LLM (LLaMA via Ollama).
 This project demonstrates:
 
 -   Schema-aware query understanding
--   Natural Language → Structured JSON query conversion
+-   Natural Language -> Structured JSON query conversion
 -   Secure Pandas execution layer
 -   LLM-based explanation generation 
 -   Modular and extensible architecture
@@ -19,31 +19,30 @@ This project demonstrates:
 
 ## Architecture Overview
 
-User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured JSON Query have pandas clauses -> Query Executor -> Computed Result\
--> LLM Explanation Generator -> Final Insight Response
+**User Query (Natural Language - English)** -> **LLM (LLaMA via Ollama)|** -> **Structured JSON Query have pandas clauses** -> **Query Executor** -> **Computed Result** -> **LLM Explanation Generator** -> **Final Insight Response**
 
 ------------------------------------------------------------------------
 
 ## Project Structure
-healthdax
-├── app.py
-├── classes
+healthdax\
+├── app.py\
+├── classes\
 │   └── dspy_insight_explanation.py
 ├── config.py
-├── data
-│   ├── processed
+├── data\
+│   ├── processed\
 │   │   └── patient_health_data.csv
-│   └── raw
+│   └── raw\
 │       ├── Health Dataset 1.xlsm
 │       └── Health Dataset 2.xlsm
-├── helpers
+├── helpers\
 │   └── helper_functions.py
-├── notebooks
+├── notebooks\
 │   ├── create_schema_llm.ipynb
 │   ├── explore-dataset.ipynb
 │   └── explore_pandasai.ipynb
 ├── requirements.txt
-└── test
+└── test\
     ├── llm_request.py
     ├── test_nl2pd_query.py
     ├── test_ollama_dspy.py
@@ -117,9 +116,9 @@ healthdax
 
 Example JSON:
 
-{ "datasets": \["dataset1"\], "filters": \[ {"column": "sex",
-"operator": "==", "value": 0} \], "groupby": \[\], "metrics": \[
-{"column": "age", "operation": "mean"} \] }
+{ "datasets": ["dataset1"], "filters": [ {"column": "sex",
+"operator": "==", "value": 0} ], "groupby": [], "metrics": [
+{"column": "age", "operation": "mean"} ] }
 
 ------------------------------------------------------------------------
 
