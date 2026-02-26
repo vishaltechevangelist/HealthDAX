@@ -82,7 +82,7 @@ healthdax
 
 ### 5. Update config.py variables as per required setup
 
--   # Dataset file path (absolute or relative)
+####    Dataset file path (absolute or relative)
 -   DATASET_FILE_PATH = "data/dataset1.xlsx"
 
 #### LLM Model Name
