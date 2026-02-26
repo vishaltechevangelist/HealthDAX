@@ -27,7 +27,7 @@ User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured 
 ## Project Structure
 healthdax\
 ├── app.py\
-├── classes\
+├── classes
 │   └── dspy_insight_explanation.py\
 ├── config.py\
 ├── data\
