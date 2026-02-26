@@ -25,30 +25,29 @@ User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured 
 ------------------------------------------------------------------------
 
 ## Project Structure
-
-healthdax
-├── app.py
-├── classes
-│   └── dspy_insight_explanation.py
-├── config.py
-├── data
-│   ├── processed
-│   │   └── patient_health_data.csv
-│   └── raw
-│       ├── Health Dataset 1.xlsm
-│       └── Health Dataset 2.xlsm
-├── helpers
-│   └── helper_functions.py
-├── notebooks
-│   ├── create_schema_llm.ipynb
-│   ├── explore-dataset.ipynb
-│   └── explore_pandasai.ipynb
-├── requirements.txt
-└── test
-    ├── llm_request.py
-    ├── test_nl2pd_query.py
-    ├── test_ollama_dspy.py
-    └── test_pandas.py
+healthdax\
+├── app.py\
+├── classes\
+│   └── dspy_insight_explanation.py\
+├── config.py\
+├── data\
+│   ├── processed\
+│   │   └── patient_health_data.csv\
+│   └── raw\
+│       ├── Health Dataset 1.xlsm\
+│       └── Health Dataset 2.xlsm\
+├── helpers\
+│   └── helper_functions.py\
+├── notebooks\
+│   ├── create_schema_llm.ipynb\
+│   ├── explore-dataset.ipynb\
+│   └── explore_pandasai.ipynb\
+├── requirements.txt\
+└── test\
+    ├── llm_request.py\
+    ├── test_nl2pd_query.py\
+    ├── test_ollama_dspy.py\
+    └── test_pandas.py\
 
 ------------------------------------------------------------------------
 
@@ -82,7 +81,7 @@ healthdax
 
 ### 5. Update config.py variables as per required setup
 
-####    Dataset file path (absolute or relative)
+####  Dataset file path (absolute or relative)
 -   DATASET_FILE_PATH = "data/dataset1.xlsx"
 
 #### LLM Model Name
