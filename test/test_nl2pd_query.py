@@ -26,8 +26,11 @@ query_obj = dspy_insight_explanation.PandasQueryGenerator()
 
 # question = """What is the average age of patients"""
 # question =  """Who is more chronic male or female """
-question = """Find patient who walks less than 20000 daily"""
+# question = """Find patient who walks less than 20000 daily"""
 # question = "what is the count of male patients"
+# question = "Find health data of patients whose age less than 45"
+question = "How many patient walks for 10 days"
+
 
 result = query_obj(input_query=question, schema_str=schema_str)
 

@@ -50,6 +50,46 @@ json_for_pandas = {
 #   "sql": "SELECT AVG(age) FROM dataset1;"
 # }
 
+# json_for_pandas = {
+#   "datasets": ["dataset1", "dataset2"],
+#   "join": {
+#     "left_dataset": "dataset1",
+#     "right_dataset": "dataset2",
+#     "type": "inner",
+#     "on" : "patient_number"
+#   },
+#   "filters": [
+#     {
+#       "column": "physical_activity_steps_per_day",
+#       "operator": "<",
+#       "value": 20000
+#     }
+#   ],
+#   "groupby": [],
+#   "metrics": [],
+#   "sql": "SELECT * FROM dataset1 INNER JOIN dataset2 ON dataset1.patient_number = dataset2.patient_number WHERE dataset2.physical_activity_steps_per_day < 20000"
+# }
+
+# json_for_pandas = {
+#   "datasets": ["dataset1"],
+#   "join": {
+#     "left_dataset": "dataset1",
+#     "right_dataset": None,
+#     "type": "inner",
+#     "on" : "patient_number"
+#   },
+#   "filters": [
+#     {
+#       "column": "age",
+#       "operator": "<",
+#       "value": 45
+#     }
+#   ],
+#   "groupby": [],
+#   "metrics": [],
+#   "sql": "SELECT * FROM dataset1 WHERE age < 45"
+# }
+
 json_for_pandas = {
   "datasets": ["dataset1", "dataset2"],
   "join": {
@@ -58,28 +98,26 @@ json_for_pandas = {
     "type": "inner",
     "on" : "patient_number"
   },
-  "filters": [
+  "filters": [],
+  "groupby": ["patient_number", "day_number"],
+  "metrics": [
     {
       "column": "physical_activity_steps_per_day",
-      "operator": "<",
-      "value": 20000
+      "aggregation": "count"
     }
   ],
-  "groupby": [],
-  "metrics": [],
-  "sql": "SELECT * FROM dataset1 INNER JOIN dataset2 ON dataset1.patient_number = dataset2.patient_number WHERE dataset2.physical_activity_steps_per_day < 20000"
+  "sql": "SELECT COUNT(physical_activity_steps_per_day) FROM dataset1 INNER JOIN dataset2 ON patient_number WHERE day_number <= 10"
 }
 
 def execute_structured_query(datasets, query):
     df = datasets[query["datasets"][0]]
     # print(df)
     # sys.exit(0)
-    # Join if needed
-    if query.get("join"):
+    
+    if query.get("join") and query["join"]["right_dataset"] is not None:
         right_df = datasets[query["join"]["right_dataset"]]
         df = df.merge(right_df, on=query["join"]["on"])
     
-    # Filters
     for f in query.get("filters", []):
         col, op, val = f["column"], f["operator"], f["value"]
         if op == "==":
@@ -89,11 +127,9 @@ def execute_structured_query(datasets, query):
         elif op == "<":
             df = df[df[col] < val]
 
-    if not query["metrics"]:
+    if len(query['groupby'])==0 and len(query["metrics"])==0:
         return df
-
-    # Aggregation
-    if len(query['groupby'])>0 and len(query["metrics"])>0:
+    elif len(query['groupby'])>0 and len(query["metrics"])>0:
         result = getattr(
             df.groupby(query["groupby"])[query["metrics"][0]["column"]],
             query["metrics"][0]["aggregation"]
