@@ -1,5 +1,3 @@
-import pandas as pd
-
 def aggregate_activity(df2):
     activity = (
         df2.groupby("patient_number")["physical_activity_steps_per_day"]
