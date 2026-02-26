@@ -17,7 +17,7 @@ This project demonstrates:
 
 ------------------------------------------------------------------------
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured JSON Query have pandas clauses -> Query Executor -> Computed Result\
 -> LLM Explanation Generator -> Final Insight Response
@@ -26,7 +26,75 @@ User Query (Natural Language - English) -> LLM (LLaMA via Ollama) -> Structured 
 
 ## Project Structure
 
+healthdax
+├── app.py
+├── classes
+│   └── dspy_insight_explanation.py
+├── config.py
+├── data
+│   ├── processed
+│   │   └── patient_health_data.csv
+│   └── raw
+│       ├── Health Dataset 1.xlsm
+│       └── Health Dataset 2.xlsm
+├── helpers
+│   └── helper_functions.py
+├── notebooks
+│   ├── create_schema_llm.ipynb
+│   ├── explore-dataset.ipynb
+│   └── explore_pandasai.ipynb
+├── requirements.txt
+└── test
+    ├── llm_request.py
+    ├── test_nl2pd_query.py
+    ├── test_ollama_dspy.py
+    └── test_pandas.py
 
+------------------------------------------------------------------------
+
+## Steps for running the project (macOS/Linux)
+
+### 1. Create Virtual Environment and activate it
+
+-   python3 -m venv venv
+-   source venv/bin/activate
+
+### 2. Clone repository (ask for datasets from authorised entity/person)
+
+-   git clone https://github.com/your-username/healthdax.git
+-   cd healthdax
+-   mkdir -p data 
+    #### Copy your dataset files manually into /data folder
+
+### 3. Install dependencies
+
+-   pip install --upgrade pip
+-   pip install -r requirements.txt
+
+### 4. Ollama Setup 
+
+#### macOS
+-    brew install ollama
+-    ollama serve
+-    ollama pull llama3
+-    ollama run llama3
+-    http://localhost:11434 (default url)
+
+### 5. Update config.py variables as per required setup
+
+-   # Dataset file path (absolute or relative)
+-   DATASET_FILE_PATH = "data/dataset1.xlsx"
+
+#### LLM Model Name
+-   LLM_MODEL_NAME = "llama3"
+
+#### LLM Server URL
+-   LLM_SRV_URL = "http://localhost:11434"
+
+#### 6. Start streamlit app
+
+-   streamlit run app.py
+-   http://localhost:8501 (HealthDAX url will be open in browser)
 
 ------------------------------------------------------------------------
 
