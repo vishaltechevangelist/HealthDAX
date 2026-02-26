@@ -21,13 +21,13 @@ DATASET2_SCHEMA_RENAME = {
 
 DATASET1_SCHEMA = {
     "patient_number": {},
-    "sex": {"values": {0: "Male", 1: "Female"}},
-    "smoking": {"values": {0: "No", 1: "Yes"}},
-    "chronic_kidney_disease": {"values": {0: "No", 1: "Yes"}},
-    "blood_pressure_abnormality": {"values": {0: "Normal", 1: "Abnormal"}},
+    "sex": {"values": {0: "Male", 1: "Female"}, "type":"int"},
+    "smoking": {"values": {0: "No", 1: "Yes"}, "type":"int"},
+    "chronic_kidney_disease": {"values": {0: "No", 1: "Yes"}, "type":"int"},
+    "blood_pressure_abnormality": {"values": {0: "Normal", 1: "Abnormal"}, "type":"int"},
     "age": {},
     "bmi": {},
-    "level_of_stress": {"values": {1: "Low", 2: "Normal", 3: "High"}},
+    "level_of_stress": {"values": {1: "Low", 2: "Normal", 3: "High"}, "type":"int"},
     "primary_key":["patient_number"]
 }
 
@@ -41,3 +41,10 @@ DATASET2_SCHEMA = {
 RELATIONSHIP = {
     "join_key": "patient_number"
 }
+
+DATASET_FILE_PATH = '/Users/vishalsaxena/Documents/DS_Workspace/healthdax/data/raw/'
+DATASET_FILE1 = 'Health Dataset 1.xlsm'
+DATASET_FILE2 = 'Health Dataset 2.xlsm'
+
+LLM_MODEL_NAME = 'ollama/llama3'
+LLM_SRV_URL = 'http://localhost:11434'
