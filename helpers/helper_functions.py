@@ -19,11 +19,17 @@ def execute_structured_query(datasets, query):
     join_info = query.get("join")
     if join_info and join_info.get("left_dataset") and join_info.get("right_dataset"):
         right_df = datasets[query["join"]["right_dataset"]]
-        df = df.merge(right_df, on=query["join"]["on"])
+        on_value = query["join"]["on"]
+        if "=" in on_value:
+            on_value = on_value.split("=")[0].strip()
+        df = df.merge(right_df, on=on_value)
     
     for f in query.get("filters", []):
         col, op, val = f["column"], f["operator"], f["value"]
-        val = int(val)
+        if val is not None:
+            val = int(val)
+        else:
+            val = 1
         # print(col, op, val)
         # st.dataframe(df.columns)
         if op == "==":
@@ -47,6 +53,8 @@ def execute_structured_query(datasets, query):
             if query["metrics"][0]["column"] is None or query["metrics"][0]["column"] == "":
                 return len(df)
             else:
+                if "count(*)" in query["metrics"][0]["column"]:
+                    query["metrics"][0]["column"] = 'patient_number'
                 return df[query["metrics"][0]["column"]].count()
         result = getattr(df[query["metrics"][0]["column"]], aggregate_function)()
 
