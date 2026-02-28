@@ -35,11 +35,13 @@ class PandasQueryStruct(dspy.Signature):
           "column": str type should be keys of schema,
           "aggregation": "count|sum|mean|min|max"
       }]
-      "sql": Correct & valid equivalent SQL query to check the response against pandas clauses
     }
-    Constraint - 
-    - Use only given schema column and return json response only, 
-    - don't change key names, don't add new keys, 
+    Rules - 
+        - Use only given schema column and return valid json response only, 
+        - don't change key names, don't add new keys, 
+        - Only populate "join" when:    
+            - More than one dataset is required
+            - AND the relationship explicitly supports the join
     """
 
     input_query = dspy.InputField(desc="User query in natural language often english language")

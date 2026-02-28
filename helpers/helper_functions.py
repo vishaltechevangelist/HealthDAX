@@ -9,13 +9,15 @@ def load_datasets(dataset_schema_file, rename_col_dict):
 
 
 def execute_structured_query(datasets, query):
-    query = validate_query(query=query)
+    print("I am here")
+    # query = validate_query(query=query)
 
     df = datasets[query["datasets"][0]]
     # print(df)
     # sys.exit(0)
     # print(query.get("join") and query["join"]["right_dataset"] is not None and query["join"]["left_dataset"] is not None)
-    if query.get("join") and query["join"]["right_dataset"] is not None and query["join"]["left_dataset"] is not None:
+    join_info = query.get("join")
+    if join_info and join_info.get("left_dataset") and join_info.get("right_dataset"):
         right_df = datasets[query["join"]["right_dataset"]]
         df = df.merge(right_df, on=query["join"]["on"])
     
@@ -64,7 +66,7 @@ def aggregate_activity(df2):
     return activity
 
 def validate_query(query):
-    if query["join"]["right_dataset"] is None or query["join"]["left_dataset"] is None or query["join"]["left_dataset"] == "" or query["join"]["right_dataset"] =="":
+    if query["join"] is None or query["join"]["right_dataset"] is None or query["join"]["left_dataset"] is None or query["join"]["left_dataset"] == "" or query["join"]["right_dataset"] =="":
         query["join"] = None
     return query
     

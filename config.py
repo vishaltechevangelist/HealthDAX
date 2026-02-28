@@ -21,10 +21,10 @@ DATASET2_SCHEMA_RENAME = {
 
 DATASET1_SCHEMA = {
     "patient_number": {},
-    "sex": {"values": {0: "Male", 1: "Female"}, "type":"int"},
-    "smoking": {"values": {0: "No", 1: "Yes"}, "type":"int"},
-    "chronic_kidney_disease": {"values": {0: "No", 1: "Yes"}, "type":"int"},
-    "blood_pressure_abnormality": {"values": {0: "Normal", 1: "Abnormal"}, "type":"int"},
+    "sex": {"values": {0: "Male", 1: "Female"}, "type":"int", "filter_val":[0, 1]},
+    "smoking": {"values": {0: "No", 1: "Yes"}, "type":"int", "filter_val":[0, 1]},
+    "chronic_kidney_disease": {"values": {0: "No", 1: "Yes"}, "type":"int", "filter_val":[0, 1]},
+    "blood_pressure_abnormality": {"values": {0: "Normal", 1: "Abnormal"}, "type":"int", "filter_val":[0, 1]},
     "age": {},
     "bmi": {},
     "level_of_stress": {"values": {1: "Low", 2: "Normal", 3: "High"}, "type":"int"},
