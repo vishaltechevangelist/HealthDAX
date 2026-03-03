@@ -1,0 +1,7 @@
+pandas
+openpyxl
+dspy-ai
+ollama
+fastapi
+uvicorn
+pydantic-settings
