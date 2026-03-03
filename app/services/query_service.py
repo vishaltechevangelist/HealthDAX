@@ -1,16 +1,39 @@
 from app.pipelines.query_pipeline import query_pipeline
+import logging
+
+logger = logging.getLogger(__name__)
 
 class QueryService:
     def process_structured(self, structured_query:dict):
         try:
-            return query_pipeline.run_structured(structured_query=structured_query)
+            logger.info(f"Received structured_query : {structured_query}")
+            result, structured_query, exec_time = query_pipeline.run_structured(structured_query=structured_query)
+            logger.info(f"Execution Result : {result}")
+            logger.info(f"Execution Time : {exec_time}")
+            return {
+                "success": True,
+                "data": result,
+                "structured_query": structured_query,
+                "execution_time": exec_time
+            }
         except Exception as e:
-            return {"error":str(e)}
+            logger.error(f"Error in structured query: {str(e)}")
+            return {"error":str(e), "success":False}
     
     def process_natural_language(self, user_query:str):
         try:
-            return query_pipeline.run_natural_language(user_query=user_query)
+            logger.info(f"Received structured_query : {user_query}")
+            result, structured_query, exec_time = query_pipeline.run_natural_language(user_query=user_query)
+            logger.info(f"Execution Result : {result}")
+            logger.info(f"Execution Time : {exec_time}")
+            return {
+                "success": True,
+                "data": result,
+                "structured_query": structured_query,
+                "execution_time": exec_time
+            }
         except Exception as e:
-            return {"error":str(e)}
+            logger.error(f"Error in NL query: {str(e)}")
+            return {"error":str(e), "success":False}
     
 query_service = QueryService()
