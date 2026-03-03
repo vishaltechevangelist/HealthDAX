@@ -14,7 +14,7 @@ class OllamaClient:
         # print("Status Code:", response.status_code)
         # print("Response Text:", response.text)
         # sys.exit(0)
-        print(response.json()['response'])
+        # print(response.json()['response'])
         return response.json()['response']
     
 ollama_client = OllamaClient()
