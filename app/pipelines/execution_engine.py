@@ -8,7 +8,7 @@ class ExecutionEngine:
         for f in filters:
             col = f['column']
             op = f['operator']
-            val = f['value']
+            val = int(f['value'])
 
             if op == '==':
                 df = df[df[col] == val]

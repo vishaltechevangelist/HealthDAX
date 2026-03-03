@@ -5,3 +5,4 @@ ollama
 fastapi
 uvicorn
 pydantic-settings
+requests
