@@ -38,5 +38,8 @@ def run_query(query: StructuredQuery):
 def run_nl_query(query: NaturalLangauageQuery):
     return query_service.process_natural_language(user_query=query)
 
+@router.post('/nl-query-hf')
+def run_nl_query_hf(query: NaturalLangauageQuery):
+    return query_service.process_natural_language_hf(user_query=query)
 
 

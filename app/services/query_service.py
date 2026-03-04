@@ -33,7 +33,23 @@ class QueryService:
                 "execution_time": exec_time
             }
         except Exception as e:
-            logger.error(f"Error in NL query: {str(e)}")
+            logger.error(f"Error in NL (here) query: {str(e)}")
+            return {"error":str(e), "success":False}
+        
+    def process_natural_language_hf(self, user_query:str):
+        try:
+            logger.info(f"Received structured_query : {user_query}")
+            result, structured_query, exec_time = query_pipeline.run_natural_language_hf(user_query=user_query)
+            logger.info(f"Execution Result : {result}")
+            logger.info(f"Execution Time : {exec_time}")
+            return {
+                "success": True,
+                "data": result,
+                "structured_query": structured_query,
+                "execution_time": exec_time
+            }
+        except Exception as e:
+            logger.error(f"Error in NL HF query: {str(e)}")
             return {"error":str(e), "success":False}
     
 query_service = QueryService()

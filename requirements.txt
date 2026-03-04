@@ -6,3 +6,7 @@ fastapi
 uvicorn
 pydantic-settings
 requests
+torch
+transformers 
+accelerate 
+bitsandbytes
