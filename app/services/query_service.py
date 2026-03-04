@@ -1,5 +1,5 @@
 from app.pipelines.query_pipeline import query_pipeline
-import logging
+import logging, traceback
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +18,7 @@ class QueryService:
             }
         except Exception as e:
             logger.error(f"Error in structured query: {str(e)}")
+            traceback.print_exc()
             return {"error":str(e), "success":False}
     
     def process_natural_language(self, user_query:str):
@@ -34,6 +35,7 @@ class QueryService:
             }
         except Exception as e:
             logger.error(f"Error in NL (here) query: {str(e)}")
+            traceback.print_exc()
             return {"error":str(e), "success":False}
         
     def process_natural_language_hf(self, user_query:str):
@@ -50,6 +52,7 @@ class QueryService:
             }
         except Exception as e:
             logger.error(f"Error in NL HF query: {str(e)}")
+            traceback.print_exc()
             return {"error":str(e), "success":False}
     
 query_service = QueryService()
