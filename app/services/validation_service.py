@@ -14,13 +14,13 @@ class ValidationService:
             if fil['operator'] not in self.ALLOWED_OPERATORS:
                 raise ValueError(f"Invalid Operator {fil['operator']}")
             
-            for met in structured_query.get('metrics', []):
-                if met['column'] not in schema_column:
-                    raise ValueError(f"Invalid column {met['column']}")
+        for met in structured_query.get('metrics', []):
+            if met['column'] not in schema_column:
+                raise ValueError(f"Invalid column {met['column']}")
                 
-                if met['aggregation'] not in self.ALLOWED_AGGREGATION:
-                    raise ValueError(f"Invalid aggregation {met['aggregation']}")
-                
-            return structured_query
+        if met['aggregation'] not in self.ALLOWED_AGGREGATION:
+                raise ValueError(f"Invalid aggregation {met['aggregation']}")
+ 
+        return structured_query
         
 validation_service = ValidationService()
