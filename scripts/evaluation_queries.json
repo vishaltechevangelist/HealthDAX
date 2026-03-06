@@ -1,0 +1,602 @@
+[
+  {
+    "query": "average BMI for patients with normal level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with male patients"
+  },
+  {
+    "query": "average BMI for patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "average Level of Hemoglobin for pregnant patients"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with yes chronic kidney disease"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with yes smoking"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI for patients with no smoking"
+  },
+  {
+    "query": "average BMI for pregnant patients"
+  },
+  {
+    "query": "average Level of Hemoglobin for patients with low level of stress"
+  },
+  {
+    "query": "count patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "average Age for patients with no chronic kidney disease"
+  },
+  {
+    "query": "average BMI for patients with yes smoking"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "average Age for pregnant patients"
+  },
+  {
+    "query": "mean Age for patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "average Level of Hemoglobin for patients with low level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "mean Level of Hemoglobin for female patients"
+  },
+  {
+    "query": "count female patients"
+  },
+  {
+    "query": "count patients with female patients"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "count patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients with patients with low level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Age for patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "mean BMI for male patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "count patients with patients with no chronic kidney disease"
+  },
+  {
+    "query": "average BMI"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "average Age for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count patients with patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean Age for patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "count patients with patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients with patients with no chronic kidney disease"
+  },
+  {
+    "query": "count patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean BMI for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients with patients with no chronic kidney disease"
+  },
+  {
+    "query": "average BMI for patients with yes smoking"
+  },
+  {
+    "query": "count patients with patients with high level of stress"
+  },
+  {
+    "query": "mean BMI for patients with high level of stress"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "average BMI for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count patients with patients with normal level of stress"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "average BMI for female patients"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "average BMI"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with low level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "count patients with no smoking"
+  },
+  {
+    "query": "count patients with yes smoking"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with patients with normal level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "average BMI for patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI for patients with yes smoking"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI for patients with no smoking"
+  },
+  {
+    "query": "count patients with no chronic kidney disease"
+  },
+  {
+    "query": "mean Age for patients with yes smoking"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "mean BMI for patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients with high level of stress"
+  },
+  {
+    "query": "average Level of Hemoglobin for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "count patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "count patients with patients with yes adrenal and thyroid disorders"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "average Age for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count patients with patients with high level of stress"
+  },
+  {
+    "query": "count patients with patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "mean Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin for patients with high level of stress"
+  },
+  {
+    "query": "average BMI for patients with yes smoking"
+  },
+  {
+    "query": "average Level of Hemoglobin for patients with low level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with female patients"
+  },
+  {
+    "query": "mean BMI for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "mean Age for patients with no chronic kidney disease"
+  },
+  {
+    "query": "mean Age for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "count patients with patients with no smoking"
+  },
+  {
+    "query": "average BMI for pregnant patients"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with patients with yes chronic kidney disease"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "count patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with no smoking"
+  },
+  {
+    "query": "count patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "average Level of Hemoglobin for female patients"
+  },
+  {
+    "query": "count patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients with patients with yes smoking"
+  },
+  {
+    "query": "average BMI for patients with no smoking"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI for patients with normal blood pressure abnormality"
+  },
+  {
+    "query": "average BMI"
+  },
+  {
+    "query": "count patients with male patients"
+  },
+  {
+    "query": "count patients with patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients with yes smoking"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "count female patients"
+  },
+  {
+    "query": "count patients with patients with no smoking"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Age for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "mean BMI for patients with high level of stress"
+  },
+  {
+    "query": "average Level of Hemoglobin for male patients"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "count patients with no smoking"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "mean Age for patients with yes chronic kidney disease"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with male patients"
+  },
+  {
+    "query": "mean BMI for patients with no smoking"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "average BMI for patients with low level of stress"
+  },
+  {
+    "query": "mean Age for patients with normal level of stress"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Level of Hemoglobin for pregnant patients"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "count pregnant patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "average Age for patients with yes smoking"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with no smoking"
+  },
+  {
+    "query": "count patients with patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count patients with patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "mean BMI for patients with normal level of stress"
+  },
+  {
+    "query": "mean Level of Hemoglobin for patients with no chronic kidney disease"
+  },
+  {
+    "query": "count patients with female patients"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean Age"
+  },
+  {
+    "query": "mean BMI"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with yes chronic kidney disease"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients with female patients"
+  },
+  {
+    "query": "average Level of Hemoglobin"
+  },
+  {
+    "query": "count patients with no adrenal and thyroid disorders"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "mean Level of Hemoglobin for female patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "count patients"
+  },
+  {
+    "query": "average Age"
+  },
+  {
+    "query": "average BMI for patients with abnormal blood pressure abnormality"
+  },
+  {
+    "query": "count male patients"
+  },
+  {
+    "query": "mean Age for patients with yes adrenal and thyroid disorders"
+  }
+]
