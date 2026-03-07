@@ -1,9 +1,13 @@
 import json, sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_PATH = PROJECT_ROOT / "scripts" / "evaluation_queries.json"
 
 from app.services.query_service import query_service
 
-with open("/Users/vishalsaxena/Documents/DS_Workspace/healthdax/scripts/evaluation_queries.json") as f:
+with open(DATA_PATH) as f:
     test_cases = json.load(f)
 
 correct = 0

@@ -18,7 +18,7 @@ class ValidationService:
             if met['column'] not in schema_column:
                 raise ValueError(f"Invalid column {met['column']}")
                 
-        if met['aggregation'] not in self.ALLOWED_AGGREGATION:
+            if met['aggregation'] not in self.ALLOWED_AGGREGATION:
                 raise ValueError(f"Invalid aggregation {met['aggregation']}")
  
         return structured_query

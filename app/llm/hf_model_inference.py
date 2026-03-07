@@ -25,6 +25,11 @@ class HFModelClient:
 
     def generate(self, prompt: str) -> str:
 
+        import torch
+
+        if torch.backends.mps.is_available():
+            torch.mps.empty_cache()
+
         inputs = self.tokenizer.apply_chat_template(
             prompt,
             return_tensors="pt",
@@ -32,20 +37,24 @@ class HFModelClient:
         )
 
         device = self.model.device
-        prompt_length = inputs["input_ids"].shape[1]
         inputs = {k: v.to(device) for k, v in inputs.items()}
-        
-        with torch.no_grad():
+
+        prompt_length = inputs["input_ids"].shape[1]
+
+        with torch.inference_mode():
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=200,
-                do_sample=False
+                max_new_tokens=500,
+                do_sample=False,
+                use_cache=True,
+                pad_token_id=self.tokenizer.eos_token_id
             )
 
-        # logger.info(f"Prompt Length ----- {prompt_length}")
-        response = self.tokenizer.decode(outputs[0][prompt_length:], skip_special_tokens=True)
-        response = response.strip('`json')
-        return response
+        response = self.tokenizer.decode(
+            outputs[0][prompt_length:],
+            skip_special_tokens=True
+        )
 
+        return response.strip("`json").strip()
 
 hf_client = HFModelClient()

@@ -2,15 +2,9 @@
 .DS_Store
 data/.DS_Store
 notebooks/.DS_Store
-model.png
-data/
 .streamlit
 .env
-summarize.py
-test.py
 error.log
-feature_metadata.py
-main_ui_sidebar.py
+app.log
 __pycache__/
 backup
-

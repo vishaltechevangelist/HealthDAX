@@ -25,8 +25,17 @@ class PromptBuilder:
             - Do not explain anything.
             - For sex: use 1 for female, 0 for male.
             - For blood_pressure_abnormality: use 1 for abnormal, 0 for normal.
+            - For smoking: use 1 for yes, 0 for no.
+            - For pregnancy: use 1 for yes, 0 for no
+            - For level_of_stress: use 1 for low, 2 for normal, 3 for high.
+            - For chronic_kidney_disease: use 1 for yes, 0 for no.
+            - For Adrenal_and_thyroid_disorders: use 1 for yes, 0 for no.
             - Do not share more example
             - Do not do few shot learning
+            - Global aggregations must have empty groupby.
+            - groupby is used only for categorical breakdowns.
+            - Do not place a metric column in groupby unless the query explicitly asks for distribution.
+            - If unsure, prefer empty groupby.
 
             User Query:
             {user_query}"""
@@ -52,6 +61,24 @@ class PromptBuilder:
             - Do NOT invent new fields.
             - Only use these keys: filters, groupby, metrics.
             - Use only available columns.
+            - Use only available columns.
+            - Allowed operators: ==, !=, >, <, >=, <=
+            - Allowed aggregations: count, sum, mean
+            - Return ONLY valid JSON.
+            - Do not explain anything.
+            - For sex: use 1 for female, 0 for male.
+            - For blood_pressure_abnormality: use 1 for abnormal, 0 for normal.
+            - For smoking: use 1 for yes, 0 for no.
+            - For pregnancy: use 1 for yes, 0 for no
+            - For level_of_stress: use 1 for low, 2 for normal, 3 for high.
+            - For chronic_kidney_disease: use 1 for yes, 0 for no.
+            - For Adrenal_and_thyroid_disorders: use 1 for yes, 0 for no.
+            - Do not share more example
+            - Do not do few shot learning
+            - Global aggregations must have empty groupby.
+            - groupby is used only for categorical breakdowns.
+            - Do not place a metric column in groupby unless the query explicitly asks for distribution.
+            - If unsure, prefer empty groupby.
 
             Available columns:
             {schema}
