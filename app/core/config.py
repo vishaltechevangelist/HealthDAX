@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     LLM_MODEL_NAME: str 
     LLM_SRV_URL: str 
     DATASET_FILE_PATH: str
+    QUERY_API_URL: str
 
     class Config:
         env_file = '.env'

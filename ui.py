@@ -1,15 +1,17 @@
 import streamlit as st
-import requests
+import requests, os
+from dotenv import load_dotenv
 
-QUERY_API_URL = "http://localhost:8000/nl-query-hf"
+load_dotenv()
 
 st.title("HealthDAX AI Analytics")
 
 query = st.text_input("Ask a question to healthcare analytics AI")
 
 if st.button("Run query"):
-    response = requests.post(QUERY_API_URL, json={"query":query})
 
+    response = requests.post(os.path.join(os.getenv('QUERY_API_URL'),"nl-query-hf"), json={"query":query})
+ 
     data = response.json()
 
     if data['success']:
