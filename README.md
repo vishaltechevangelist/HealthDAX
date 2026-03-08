@@ -102,7 +102,7 @@ healthdax/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/healthdax.git
+git clone https://github.com/vishaltechevangelist/healthdax.git
 cd healthdax
 ```
 
@@ -194,7 +194,7 @@ docker run -p 8000:8000 healthdax
 POST request:
 
 ```
-POST /query
+POST /nl-query
 ```
 
 Example body:
